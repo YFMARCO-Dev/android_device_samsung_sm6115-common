@@ -1,5 +1,5 @@
 filegroup {
-    name: "android.hardware.audio-impl_gta4l_srcs",
+    name: "android.hardware.audio-impl_samsung-sm6115_srcs",
     srcs: [
         "Device.cpp",
         "DevicesFactory.cpp",
@@ -12,18 +12,18 @@ filegroup {
 }
 
 cc_library_headers {
-    name: "android.hardware.audio-impl_gta4l_headers",
+    name: "android.hardware.audio-impl_samsung-sm6115_headers",
     proprietary: true,
     vendor: true,
     export_include_dirs: ["include"],
 }
 
 cc_defaults {
-    name: "android.hardware.audio-impl_gta4l",
+    name: "android.hardware.audio-impl_samsung-sm6115",
     relative_install_path: "hw",
     proprietary: true,
     vendor: true,
-    srcs: [":android.hardware.audio-impl_gta4l_srcs"],
+    srcs: [":android.hardware.audio-impl_samsung-sm6115_srcs"],
 
     defaults: ["hidl_defaults"],
 
@@ -47,7 +47,7 @@ cc_defaults {
     ],
 
     header_libs: [
-        "android.hardware.audio-impl_gta4l_headers",
+        "android.hardware.audio-impl_samsung-sm6115_headers",
         "android.hardware.audio.common.util@all-versions",
         "libaudioutils_headers",
         "libaudio_system_headers",
@@ -57,13 +57,13 @@ cc_defaults {
     ],
 
     export_header_lib_headers: [
-        "android.hardware.audio-impl_gta4l_headers",
+        "android.hardware.audio-impl_samsung-sm6115_headers",
     ],
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@2.0-impl.gta4l",
-    defaults: ["android.hardware.audio-impl_gta4l"],
+    name: "android.hardware.audio@2.0-impl.samsung-sm6115",
+    defaults: ["android.hardware.audio-impl_samsung-sm6115"],
     shared_libs: [
         "android.hardware.audio@2.0",
         "android.hardware.audio@2.0-util",
@@ -78,8 +78,8 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@4.0-impl.gta4l",
-    defaults: ["android.hardware.audio-impl_gta4l"],
+    name: "android.hardware.audio@4.0-impl.samsung-sm6115",
+    defaults: ["android.hardware.audio-impl_samsung-sm6115"],
 
     shared_libs: [
         "android.hardware.audio@4.0",
@@ -95,8 +95,8 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@5.0-impl.gta4l",
-    defaults: ["android.hardware.audio-impl_gta4l"],
+    name: "android.hardware.audio@5.0-impl.samsung-sm6115",
+    defaults: ["android.hardware.audio-impl_samsung-sm6115"],
     shared_libs: [
         "android.hardware.audio@5.0",
         "android.hardware.audio@5.0-util",
@@ -111,8 +111,8 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@6.0-impl.gta4l",
-    defaults: ["android.hardware.audio-impl_gta4l"],
+    name: "android.hardware.audio@6.0-impl.samsung-sm6115",
+    defaults: ["android.hardware.audio-impl_samsung-sm6115"],
     shared_libs: [
         "android.hardware.audio@6.0",
         "android.hardware.audio@6.0-util",
@@ -127,8 +127,8 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@7.0-impl.gta4l",
-    defaults: ["android.hardware.audio-impl_gta4l"],
+    name: "android.hardware.audio@7.0-impl.samsung-sm6115",
+    defaults: ["android.hardware.audio-impl_samsung-sm6115"],
     shared_libs: [
         "android.hardware.audio@7.0",
         "android.hardware.audio@7.0-util",
@@ -145,8 +145,8 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@7.1-impl_gta4l",
-    defaults: ["android.hardware.audio-impl_gta4l"],
+    name: "android.hardware.audio@7.1-impl_samsung-sm6115",
+    defaults: ["android.hardware.audio-impl_samsung-sm6115"],
     shared_libs: [
         "android.hardware.audio@7.0",
         "android.hardware.audio@7.1",

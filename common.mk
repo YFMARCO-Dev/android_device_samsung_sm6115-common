@@ -61,7 +61,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio.service \
-    android.hardware.audio@6.0-impl.gta4l:32 \
+    android.hardware.audio@6.0-impl.samsung-sm6115:32 \
     android.hardware.bluetooth.audio-impl:32 \
     audio.bluetooth.default \
     audio.r_submix.default \
@@ -176,7 +176,7 @@ PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung
 
-$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/gta4l-common:libskeymaster4device)
+$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm6115-common:libskeymaster4device)
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -253,7 +253,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
-$(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-gta4l)
+$(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-samsung)
 
 # Seccomp
 PRODUCT_COPY_FILES += \
