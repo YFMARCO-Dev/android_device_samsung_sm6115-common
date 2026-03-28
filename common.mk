@@ -182,6 +182,10 @@ $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/s
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
 # Health
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/batt_slate_mode)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
