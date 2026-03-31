@@ -57,7 +57,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86
 TARGET_KERNEL_SOURCE := kernel/samsung/sm6115
 TARGET_KERNEL_CONFIG := \
     vendor/bengal-perf_defconfig \
-    vendor/samsung/gta4l.config
+    vendor/gta4l-common.config
 
 # Boot image layout and mkbootimg arguments
 BOARD_KERNEL_PAGESIZE    := 4096
