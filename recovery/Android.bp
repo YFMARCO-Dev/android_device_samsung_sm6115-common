@@ -15,7 +15,7 @@
 //
 
 cc_library_static {
-    name: "librecovery_updater_samsung-sm6115",
+    name: "librecovery_updater_samsung_sm6115",
     include_dirs: [
         "bootable/deprecated-ota/edify/include",
         "bootable/deprecated-ota/updater/include",
