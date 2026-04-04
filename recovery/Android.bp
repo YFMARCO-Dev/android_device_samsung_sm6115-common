@@ -15,9 +15,7 @@
 //
 
 cc_library_static {
-    name: "librecovery_updater_samsung_sm6115",
-    srcs: [
-        "recovery_updater.cpp",
+    name: "librecovery_updater_samsung_sm6115"
     include_dirs: [
         "bootable/deprecated-ota/edify/include",
         "bootable/deprecated-ota/updater/include",
@@ -25,4 +23,5 @@ cc_library_static {
         "bootable/recovery/otautil/include",
         "system/libbase/include",
     ],
+    srcs: ["recovery_updater.cpp"],
 }
