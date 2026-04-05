@@ -271,8 +271,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/samsung \
-    vendor/qcom/opensource/usb/etc
+    hardware/samsung
 
 # USB
 PRODUCT_PACKAGES += \
