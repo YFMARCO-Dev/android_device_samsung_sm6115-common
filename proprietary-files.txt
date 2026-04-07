@@ -336,6 +336,7 @@ vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmorpho_video_refiner.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libpadm.so
+vendor/lib64/libsavscmn.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libqti-iopd-client.so
