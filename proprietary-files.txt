@@ -726,6 +726,7 @@ vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmi_legacy.so
 vendor/lib/libqmiservices.so
+vendor/lib/libqrtr.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdiagjni.so
