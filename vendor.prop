@@ -214,7 +214,7 @@ ro.config.pageboost.vramdisk.minimize=true
 
 # Soc info
 ro.vendor.qti.soc_model=SM6115
-ro.soc.model=SM611
+ro.soc.model=SM6115
 ro.soc.manufacturer=QTI
 
 # Other
