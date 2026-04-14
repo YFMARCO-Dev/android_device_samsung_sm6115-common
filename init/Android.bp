@@ -126,11 +126,3 @@ sh_binary {
     src: "init.qti.dcvs.sh",
     soc_specific: true,
 }
-
-sh_binary {
-    name: "init.qti.chg_policy.sh",
-    src: "init.qti.chg_policy.sh",
-    soc_specific: true,
-}
-
-
