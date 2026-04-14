@@ -131,7 +131,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
     init.ramplus.rc \
     init.samsung.bsp.rc \
