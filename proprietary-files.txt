@@ -487,7 +487,6 @@ vendor/firmware/novatek_ts_mp_txd_inx.bin:recovery/root/vendor/firmware/novatek_
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/gatekeeper.mdfpp.so
 
