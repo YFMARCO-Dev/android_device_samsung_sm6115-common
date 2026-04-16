@@ -619,7 +619,6 @@ vendor/etc/msm_irqbalance.conf
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service
-vendor/etc/init/android.hardware.keymaster@4.0-service.rc
 vendor/lib64/libgrdm.so
 vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libkeymasterdeviceutils.so
