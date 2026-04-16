@@ -93,8 +93,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext odm product vendor
-BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := $(shell echo $$(($(BOARD_SUPER_PARTITION_SIZE) - 4194304))) # (BOARD_SUPER_PARTITION_SIZE - "reasonable overhead of 4 MiB")
+BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
+BUILDING_SUPER_EMPTY_IMAGE := true
 
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
