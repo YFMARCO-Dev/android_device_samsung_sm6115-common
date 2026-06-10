@@ -489,6 +489,7 @@ vendor/firmware/novatek_ts_mp_txd_inx.bin:recovery/root/vendor/firmware/novatek_
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/gatekeeper.mdfpp.so
+vendor/lib64/android.hardware.gatekeeper@1.0-impl.so
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
