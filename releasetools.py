@@ -1,3 +1,4 @@
+#!/bin/env python3
 #
 # Copyright (C) 2023 The LineageOS Project
 #
@@ -16,36 +17,47 @@
 import common
 import re
 
+def FullOTA_Assertions(info):
+  OTA_Assertions(info, info.input_zip)
+
+def IncrementalOTA_Assertions(info):
+  OTA_Assertions(info, info.input_zip)
+
 def FullOTA_InstallEnd(info):
   OTA_InstallEnd(info)
 
 def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info)
 
-def FullOTA_Assertions(info):
-  AddTrustZoneAssertion(info, info.input_zip)
+def OTA_Assertions(info, input_zip):
+  try:
+    android_info = input_zip.read("OTA/android-info-extra.txt").decode('utf-8')
+  except:
+    return
 
-def IncrementalOTA_Assertions(info):
-  AddTrustZoneAssertion(info, info.target_zip)
+  m = re.search(r'require\s+version-bootloader-min\s*=\s*(\S+)', android_info)
+  if m:
+    bootloader_version = m.group(1)
+    cmd = (
+      'assert(samsung_sm6115.verify_bootloader_min("{}") == "1" || '
+      'abort("ERROR: Upgrade firmware (Android 12+)"););'
+    ).format(bootloader_version)
+
+    info.script.AppendExtra(cmd)
 
 def AddImage(info, basename, dest):
   path = "IMAGES/" + basename
+
   if path not in info.input_zip.namelist():
     return
 
   data = info.input_zip.read(path)
   common.ZipWriteStr(info.output_zip, basename, data)
-  info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
-  info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
-def AddTrustZoneAssertion(info, input_zip):
-  android_info = info.input_zip.read("OTA/android-info-extra.txt")
-  m = re.search(r'require\s+version-trustzone\s*=\s*(\S+)', android_info.decode('utf-8'))
-  if m:
-    versions = m.group(1).split('|')
-    if len(versions) and '*' not in versions:
-      cmd = 'assert(samsung.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1" || abort("ERROR: This package requires firmware from an Android 12 based stock ROM build. Please upgrade firmware and retry!"););'
-      info.script.AppendExtra(cmd)
+  info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
+  info.script.AppendExtra(
+    'package_extract_file("%s", "%s");' % (basename, dest)
+  )
 
 def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
