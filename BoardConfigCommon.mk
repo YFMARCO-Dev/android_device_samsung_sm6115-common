@@ -6,8 +6,9 @@
 
 COMMON_PATH := device/samsung/sm6115-common
 
-# A/B
+# OTA package
 AB_OTA_UPDATER := false
+TARGET_OTA_ALLOW_NON_AB := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
