@@ -27,11 +27,11 @@ persist.vendor.audio.fluence.tmic.enabled=false
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.ras.enabled=false
+persist.vendor.audio.spv3.enable=true
 ro.qc.sdk.audio.fluencetype=none
 ro.vendor.audio.sdk.fluencetype=fluence
 
-persist.vendor.audio.ras.enabled=false
-persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
 persist.vendor.radio.enableadvancedscan=true
 ro.qc.sdk.audio.ssr=false
