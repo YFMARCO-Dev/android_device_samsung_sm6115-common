@@ -29,9 +29,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/sm6115-common/sm6115-common-vendor.mk)
-
 PRODUCT_CHARACTERISTICS := tablet
 
 # AAPT
