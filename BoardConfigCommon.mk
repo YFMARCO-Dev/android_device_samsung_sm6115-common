@@ -92,7 +92,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
-BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system odm product vendor
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext odm product vendor
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
 BUILDING_SUPER_EMPTY_IMAGE := true
