@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2019-2025 The LineageOS Project
+# Copyright (C) 2026 The LineageOS Project
+# copyright (C) 2026 YFMARCO-Dev
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
